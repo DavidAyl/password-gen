@@ -3,10 +3,12 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
   var count = Number(
-    prompt(
-      "Please enter the amount of characters you would like in your password."
-    )
+    prompt("How many characters would you like your password")
   );
+
+  while (count > 129) {
+    count = Number(prompt("Please select a number between 1 - 128"));
+  }
 
   var hasLowercase = confirm("Do you want Lowercase");
   var hasUppercase = confirm("Do you want Uppercase");
