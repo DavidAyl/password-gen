@@ -8,12 +8,34 @@ function generatePassword() {
     )
   );
 
+  var hasLowercase = confirm("Do you want Lowercase");
+  var hasUppercase = confirm("Do you want Uppercase");
+  var hasNumbers = confirm("Do you want Numbers");
+  var hasSpecial = confirm("Do you want Special characters");
+
   var letters = "abcdefghijklmnopqrstuvwxyz";
+  var uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numbers = "0123456789";
+  var special = "!@#$%^&*()_+=-`~";
   var genPassword = "";
 
+  var all = "";
+  if (hasLowercase === true) {
+    all = letters;
+  }
+  if (hasUppercase === true) {
+    all += uppercase;
+  }
+  if (hasNumbers === true) {
+    all += numbers;
+  }
+  if (hasSpecial === true) {
+    all += special;
+  }
+
   for (var i = 0; i < count; i++) {
-    var random = Math.floor(Math.random() * letters.length);
-    genPassword += letters[random];
+    var random = Math.floor(Math.random() * all.length);
+    genPassword += all[random];
   }
 
   console.log(genPassword);
