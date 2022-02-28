@@ -10,11 +10,9 @@
 
 3. [Script Breakdown](#script-breakdown)
 
-4. [Usage](#usage)
+4. [Reference Links](#reference-links)
 
-5. [Reference Links](#reference-links)
-
-6. [Visuals](#visuals)
+5. [Visuals](#visuals)
 
 <hr>
 
